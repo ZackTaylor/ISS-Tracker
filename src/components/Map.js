@@ -13,6 +13,10 @@ class Map extends Component {
     }, 1500);
   }
 
+  onChildClick = (key, childProps) => {
+    this.props.toggleLock();
+  };
+
   shouldComponentUpdate = shouldPureComponentUpdate;
 
   render() {
@@ -20,8 +24,9 @@ class Map extends Component {
       <div className="map container-full">
         <GoogleMap
           bootstrapURLKeys={{ key: 'AIzaSyDtqPWmSSH_XVeYBh5EHPjAG3KRG5_cGIg' }}
-          center={this.props.iss.center || [0, 0]}
+          center={this.props.iss.center}
           zoom={8}
+          onChildClick={this.onChildClick}
         >
           <SpaceStation {...this.props.iss.coords} />
         </GoogleMap>
