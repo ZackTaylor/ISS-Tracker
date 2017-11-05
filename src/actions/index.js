@@ -2,7 +2,7 @@ import axios from 'axios';
 export const GET_ISS_POSITION = 'GET_ISS_POSITION';
 
 export const updateIssPosition = () => {
-  const request = axios.get('http://api.open-notify.org/iss-now.json');
+  const request = axios.get('https://api.wheretheiss.at/v1/satellites/25544');
   return {
     type: GET_ISS_POSITION,
     payload: request
