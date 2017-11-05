@@ -1,12 +1,12 @@
 import { GET_ISS_POSITION } from '../actions';
 
-export default function(state = { coords: { lat: 41.881832, lng: -87.6231 } }, action) {
+export default function(state = { coords: { lat: 0, lng: 0 } }, action) {
   switch (action.type) {
     case GET_ISS_POSITION:
       return {
         coords: {
-          lat: Number(action.payload.data.iss_position.latitude),
-          lng: Number(action.payload.data.iss_position.longitude)
+          lat: Number(action.payload.data.latitude),
+          lng: Number(action.payload.data.longitude)
         }
       };
 
