@@ -17,7 +17,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div className="map">
+      <div className="map container-full">
         <GoogleMap
           bootstrapURLKeys={{ key: 'AIzaSyDtqPWmSSH_XVeYBh5EHPjAG3KRG5_cGIg' }}
           center={this.props.iss.center || [0, 0]}
