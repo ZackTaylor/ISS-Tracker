@@ -4,7 +4,7 @@
 }
 
 .map:first-child {
-  position: absolute !important;
+  position: absolute;
 }
 
 .container-full {
