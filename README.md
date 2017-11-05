@@ -5,9 +5,9 @@ A react app that plots the International Space Station's position on the map. Se
 ## TL;DR
 
 ```sh
-git clone git@github.com:ZackTaylor/Pharmacy-Picker.git
+git clone git@github.com:ZackTaylor/ISS-Tracker.git
 
-cd Pharmacy-Picker/
+cd ISS-Tracker/
 yarn install
 yarn start
 ```
@@ -20,7 +20,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see the app.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details
 
 ## Available Scripts
 
