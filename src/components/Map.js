@@ -5,20 +5,28 @@ import SpaceStation from './SpaceStation';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 import './Map.css';
 
-export default class Map extends Component {
+class Map extends Component {
   shouldComponentUpdate = shouldPureComponentUpdate;
 
+  handleClick = () => {
+    this.props.updateIssPosition();
+  };
+
   render() {
+    console.log(this.props.iss.coords);
     return (
       <div className="map">
         <GoogleMap
           bootstrapURLKeys={{ key: 'AIzaSyDtqPWmSSH_XVeYBh5EHPjAG3KRG5_cGIg&libraries=places' }}
-          center={[41.881832, -87.62317]}
-          zoom={11}
+          center={[this.props.iss.coords.lat, this.props.iss.coords.lng]}
+          zoom={5}
         >
-          <SpaceStation lat={41.881832} lng={-87.62317} />
+          <SpaceStation {...this.props.iss.coords} />
         </GoogleMap>
+        <button onClick={this.handleClick}> update</button>
       </div>
     );
   }
 }
+
+export default Map;
