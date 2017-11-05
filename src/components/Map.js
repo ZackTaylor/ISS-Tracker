@@ -19,9 +19,9 @@ class Map extends Component {
     return (
       <div className="map">
         <GoogleMap
-          bootstrapURLKeys={{ key: 'AIzaSyDtqPWmSSH_XVeYBh5EHPjAG3KRG5_cGIg&libraries=places' }}
-          center={[this.props.iss.coords.lat, this.props.iss.coords.lng]}
-          zoom={1}
+          bootstrapURLKeys={{ key: 'AIzaSyDtqPWmSSH_XVeYBh5EHPjAG3KRG5_cGIg' }}
+          center={this.props.iss.center || [0, 0]}
+          zoom={8}
         >
           <SpaceStation {...this.props.iss.coords} />
         </GoogleMap>
