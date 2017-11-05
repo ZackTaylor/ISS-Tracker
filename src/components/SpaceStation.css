@@ -1,0 +1,7 @@
+.iss > img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: -30px;
+  top: -30px;
+}
