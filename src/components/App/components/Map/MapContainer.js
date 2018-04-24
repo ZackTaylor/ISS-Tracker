@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import Map from '../components/Map';
+import Map from './Map';
 import { bindActionCreators } from 'redux';
 
-import { updateIssPosition, toggleLock } from '../actions';
+import { updateIssPosition, toggleLock } from '../../../../actions';
 
 function mapStateToProps({ iss }) {
   return { iss };
